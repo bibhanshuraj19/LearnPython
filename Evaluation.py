@@ -1,57 +1,26 @@
-import google.generativeai as genai
+import heapq
 
+def dijkstra(graph, start):
+    distances = {node: float('inf') for node in graph}
+    distances[start] = 0
+    priority_queue = [(0, start)]
     
-genai.configure(api_key="AIzaSyBamCfjQfvXxgYRmOngc6yWwVeQIULspZ8")
+    while priority_queue:
+        current_distance, current_node = heapq.heappop(priority_queue)
+        if current_distance > distances[current_node]:
+            continue
+        for neighbor, weight in graph[current_node].items():
+            distance = current_distance + weight
+            if distance < distances[neighbor]:
+                distances[neighbor] = distance
+                heapq.heappush(priority_queue, (distance, neighbor))
+    return distances
 
-
-BASE_PROMPT = """
-You are an assistant helping grade coding assignments. Evaluate the student's code based on the provided marking scheme.
-Focus on logic and readability. If the code is incomplete but has a correct approach, assign partial marks. Provide detailed
-feedback for improvement.
-"""
-
-def generate_feedback(question, code, marking_scheme):
-
-    prompt = f"""
-    {BASE_PROMPT}
-
-    Question: {question}
-
-    Marking Scheme: {marking_scheme}
-
-    Student's Code:
-    ```
-    {code}
-    ```
-
-    Evaluate the code and provide a grade along with feedback based on the marking scheme.
-    """
-    
-    try:
-       
-        model = genai.GenerativeModel('gemini-1.5-flash')
-        
-        feedback = model.generate_content(prompt)
-        
-        if feedback and feedback.candidates:
-            feedback_text = feedback.candidates[0].content.parts[0].text
-            return feedback_text
-        else:
-            return "No feedback generated. Please check the API response."
-    
-    except Exception as e:
-        return f"An error occurred: {str(e)}"
-
-if __name__ == '__main__':
-    
-    question = input("Enter the question:\n")
-    
-    
-    student_code = input("Enter the student's code:\n")
-
-   
-    marking_scheme = input("Enter the marking scheme:\n")
-
- 
-    feedback = generate_feedback(question, student_code, marking_scheme)
-    print("\nFeedback and Grade:\n", feedback)
+# Example Usage
+graph = {
+    'A': {'B': 1, 'C': 4},
+    'B': {'A': 1, 'C': 2, 'D': 5},
+    'C': {'A': 4, 'B': 2, 'D': 1},
+    'D': {'B': 5, 'C': 1}
+}
+print("Shortest distances:", dijkstra(graph, 'A'))
