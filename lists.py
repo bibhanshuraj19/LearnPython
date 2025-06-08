@@ -85,3 +85,4 @@ fruits23 = ["mango", "cherry", "banana", "kiwi", "apple"]
 fruits24 = ["guava", "litchi", "adrak", "tomato"]
 fruits23.extend(fruits24)
 print(fruits23)
+
