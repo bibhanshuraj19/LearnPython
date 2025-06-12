@@ -132,4 +132,12 @@ print(phonebook2)
 # Iterating over dictonaries 
 for name, number in phonebook.items():
     print("Phone number of %s is %d" % (name, number))
-   
+
+phonebook3 = {
+   "Raj" : 9876543210,
+   "Rajesh" : 9876543211,
+   "Rajeshwari" : 9876543212,
+   "Maheshwari" : 9876543213,
+}
+phonebook3.pop("Maheshwari")
+print(phonebook3)
