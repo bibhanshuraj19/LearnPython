@@ -1,5 +1,6 @@
 import os 
 import shutil
+import numpy 
 
 f = open('test.txt','w+')
 f.write('This is a test file')
