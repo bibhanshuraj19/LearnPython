@@ -23,3 +23,8 @@ print(astring.count("o"))
 print(astring.index("o"))
 
 print(astring[3:7:2])
+print(astring[::-1])
+print(astring.upper())
+
+print(astring.startswith("Hello"))
+print(astring.endswith("asassadasd"))
