@@ -45,3 +45,85 @@ for i in range (1,10):
     print(i)
 else :
     print("this is not a loop")
+
+print("------------------------------------------------")
+n = 6
+for i in range(1,n) :
+    print(i)
+print("------------------------------------------------")
+
+
+l1 = ["geeks", "for", "geeks"]
+for i in l1 :
+    print(i)
+print("------------------------------------------------")
+
+tup = ("geeks", "for", "geeks")
+for i in tup :
+    print(i)
+print("------------------------------------------------")
+
+s = "geeks"
+for i in s :
+    print(i)
+print("------------------------------------------------")
+
+d = dict({'x':123, 'y':456})
+for i in d:
+    print("%s : %d" %(i, d[i]))
+print("------------------------------------------------")
+
+set1 = {1,2,3,4,5,6,7,8,9,10}
+for i in set1 :
+    print(i)
+print("------------------------------------------------")
+
+li = ["geeks", "for", "geeks", "for", "me"]
+for index in range(len(li)) :
+    print(li[index])
+print("------------------------------------------------")
+
+
+li1 = ["geeks", "for", "geeks", "for", "me"]
+for index in range(len(li1)) :
+    print(li1[index])
+else :
+    print("this is not a loop")
+print("------------------------------------------------")
+
+cnt = 0
+while (cnt < 5) :
+    cnt = cnt + 1
+    print("hello")
+print("-------------------------------------------------")
+
+cnt = 0
+while (cnt < 5) :
+    cnt = cnt + 1
+    print("hello")
+else :
+    print("this is not a loop")
+print("-------------------------------------------------")
+
+for i in range(1,5) :
+    for j in range (i) :
+        print(i, end=' ')
+    print()
+print("-------------------------------------------------")
+
+for letter in "bibhanshuraj" :
+    if letter == 'a' or letter == 'b' :
+        continue
+    print(letter)
+print("-------------------------------------------------")
+for letter in "bibhanshuraj" :
+    if letter == 'b' or letter == 'a' :
+        break
+print(letter)
+print("-------------------------------------------------")
+
+for letter in "bibhanshuraj" :
+    pass
+print(letter)  # iterates through all and prints the last one
+print("-------------------------------------------------")
+
