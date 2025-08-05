@@ -28,3 +28,20 @@ y = object()
 x_list = [x]*10
 y_list = [y]*10
 big_list = x_list + y_list
+
+
+a = 13
+b = 33
+
+print(a > b)
+print(a < b)
+print(a == b)
+print(a != b)
+print(a >= b)
+print(a <= b)
+
+a = True
+b = False
+print(a and b)
+print(a or b)
+print(not b)

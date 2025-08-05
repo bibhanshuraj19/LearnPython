@@ -42,6 +42,9 @@ a1, b1 = b1, a1
 print(a1, b1)
 
 word = "Python"
+word2 = " love"
+word3 = word + word2
+print(word3)
 length = len(word)
 print(length)
 
