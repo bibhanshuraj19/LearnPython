@@ -86,3 +86,10 @@ if (y in list) :
     print("y is in list")
 else :
     print("y is not in list")
+print("------------------------------")
+
+
+a, b = 10, 20
+min = a if a < b else b
+print(min)
+print("------------------------------")
