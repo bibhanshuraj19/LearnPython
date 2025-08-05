@@ -45,3 +45,44 @@ b = False
 print(a and b)
 print(a or b)
 print(not b)
+
+a = 10
+b = 4
+
+print(a & b)
+print(a | b)
+print(~a)
+print(a ^ b)
+print(a >> 2)
+print(a << 2)
+print("------------------------------")
+
+a = 10
+b = a
+print(b)
+b += a
+print(b)
+print("------------------------------")
+
+
+a = 10
+b = 20
+c = a
+print(a is not b)
+print(a is c)
+print("------------------------------")
+
+
+x = 24
+y = 20
+list = [10, 20, 30, 40, 50]
+
+if (x not in list) :
+    print("x is not in list")
+else :
+    print("x is in list")
+
+if (y in list) :
+    print("y is in list")
+else :
+    print("y is not in list")
