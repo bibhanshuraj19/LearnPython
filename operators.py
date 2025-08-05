@@ -93,3 +93,40 @@ a, b = 10, 20
 min = a if a < b else b
 print(min)
 print("------------------------------")
+
+expr = 10 + 20 * 30
+print(expr)
+name = "Alex"
+age = 0
+
+if name == "Alex" or name == "John" and age >= 2:
+    print("Hello! Welcome.")
+else :
+    print("Good Bye!")
+print("------------------------------")
+
+num1 = 5
+num2 = 2
+
+sum = num1 + num2
+difference  = num1 - num2
+product = num1 * num2
+quotient = num1 / num2
+remainder = num1 % num2
+
+print("Sum : ",sum)
+print("Difference : ",difference)
+print("Product : ",product)
+print("Quotient : ",quotient)
+print("Remainder : ",remainder)
+print("------------------------------")
+
+num1 = 30
+num2 = 35
+
+if num1 > num2 :
+    print("num1 > num2")
+elif num1 < num2 :
+    print("num1 < num2")
+else :
+    print("num1 = num2")
