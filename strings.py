@@ -30,3 +30,4 @@ print(astring.startswith("Hello"))
 print(astring.endswith("asassadasd"))
 
 afterwards = astring.split(" ")
+
