@@ -24,7 +24,29 @@ class Cat :
     def display_name(self):
         print(f"cat name is {self.name}")
 
-class persian :
+class persian(Cat) :
     def sound(self):
         print("persian meow")
+
+# Multilevel Inheritance
+class GuideCat(persian):
+    def guide(self):
+        print(f"{self.name} guide cat!")
+
+# Multiple Inheritance
+class Friendly:
+    def greet(self):
+        print("friendly")
+
+class Golden(Cat, Friendly):
+    def greet(self):
+        print("Golden")
+
+lab = persian("Buddy")
+lab.display_name()
+lab.sound()
+
+guide_cat = GuideCat("Green")
+guide_cat.display_name()
+guide_cat.guide()
 
