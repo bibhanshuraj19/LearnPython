@@ -1,0 +1,30 @@
+class Dog :
+    species = "canine"  # species is a class variable
+
+    def __init__(self, name, age) : # here name and age are instance variable
+        self.name = name
+        self.age = age
+
+# creating an object of the dog class
+dog1 = Dog("John", 20)
+print(dog1.species)
+print(dog1.age)
+print(dog1.name)
+
+print(dog1.name, dog1.age, dog1.species)
+
+# modify
+Dog.species = "german"
+print(dog1.species) # updated class variable
+
+# Single Inheritance
+class Cat :
+    def __init__(self, name):
+        self.name = name
+    def display_name(self):
+        print(f"cat name is {self.name}")
+
+class persian :
+    def sound(self):
+        print("persian meow")
+
