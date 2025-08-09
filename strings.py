@@ -31,3 +31,7 @@ print(astring.endswith("asassadasd"))
 
 afterwards = astring.split(" ")
 
+name = "bibhanshu Raj"
+new = "B" + name[1:]
+print(new)
+
