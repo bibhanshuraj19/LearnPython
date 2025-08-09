@@ -5,3 +5,4 @@ item1_price_total = item1_price * item1_quantity
 print(item1_price)
 print(item1_quantity)
 print(item1_price_total)
+print()
