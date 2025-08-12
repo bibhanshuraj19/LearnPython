@@ -19,3 +19,5 @@ print(item2.price)
 
 random_str = 'aaa'
 print(random_str.upper())
+print(random_str.lower())
+
