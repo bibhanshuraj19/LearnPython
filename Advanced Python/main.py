@@ -21,3 +21,9 @@ random_str = 'aaa'
 print(random_str.upper())
 print(random_str.lower())
 
+
+class Item2() :
+    def calculate_total_price():
+        pass
+
+
